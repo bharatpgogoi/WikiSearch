@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="search.wiki.com.ui.SearchActivity">
+
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:iconifiedByDefault="false">
+
+            <requestFocus />
+        </SearchView>
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="25pt"
+            android:layout_below="@+id/searchView" />
+
+        <ProgressBar
+             android:id="@+id/progress_bar"
+             style="?android:attr/progressBarStyleHorizontal"
+             android:layout_width="fill_parent"
+             android:layout_height="15dp"
+             android:indeterminate="true"
+             android:padding="2dip"
+             android:visibility="invisible">
+        </ProgressBar>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             tools:ignore="ContentDescription"
+             android:id="@+id/splash"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@null"
+             android:fadingEdge="vertical"
+             android:fitsSystemWindows="true">
+    <ImageView android:id="@+id/splashscreen"
+               android:layout_height="match_parent"
+               android:layout_width="match_parent"
+               android:scaleType="fitXY"
+               android:src="@drawable/splashscreen"/>
+</FrameLayout>

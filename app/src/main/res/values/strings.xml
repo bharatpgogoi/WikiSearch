@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">WikiSearch</string>
+    <string name="hint">search</string>
+    <string name="wiki_search_url">https://en.wikipedia.org/w/api.php?</string>
+    <string name="wiki_page_url">https://en.m.wikipedia.org/?curid=</string>
+</resources>
