@@ -5,5 +5,5 @@
     <string name="wiki_page_url">https://en.m.wikipedia.org/?curid=</string>
     <string name="no_internet_message">Internet is not available</string>
     <string name="retry">Retry</string>
-    <string name="timed_out">Connection Timed Out</string>
+    <string name="timed_out">Server Not Reachable</string>
 </resources>

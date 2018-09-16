@@ -1,6 +1,5 @@
 package search.wiki.com.model;
 
-import android.net.http.HttpResponseCache;
 import android.os.AsyncTask;
 import android.util.Log;
 
@@ -10,13 +9,13 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.ref.WeakReference;
 import java.net.HttpURLConnection;
 import java.net.SocketTimeoutException;
 import java.net.URL;
+import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -113,6 +112,10 @@ public class WikiSearch extends AsyncTask<URL,Integer,ArrayList<SearchResult>> {
             mIsTimedOut = true;
         }
         catch (ConnectTimeoutException e) {
+            Log.e(TAG,e.getMessage());
+            mIsTimedOut = true;
+        }
+        catch(UnknownHostException e){
             Log.e(TAG,e.getMessage());
             mIsTimedOut = true;
         }
