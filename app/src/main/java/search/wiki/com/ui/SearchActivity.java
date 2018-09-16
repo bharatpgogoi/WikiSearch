@@ -64,6 +64,7 @@ public class SearchActivity extends BaseActivity implements SearchView.OnQueryTe
     public boolean onQueryTextChange(String query) {
         mOffest = 0;
         mQuery = query;
+        mAdapter.clear();
         if(ConnectionUtil.isConnected(this)) {
             if (mQuery != null && !mQuery.isEmpty()) {
                 String url = getSearchUrl();
@@ -75,9 +76,6 @@ public class SearchActivity extends BaseActivity implements SearchView.OnQueryTe
                 } catch (MalformedURLException e) {
                     Log.e(TAG, e.getMessage());
                 }
-            } else {
-                mAdapter.clear();
-
             }
         }
         else {
